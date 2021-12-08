@@ -1,3 +1,7 @@
+/*
+This file was auto-generated. Do not modify it, lest your changes be overwritten.
+*/
+
 package oncecell
 
 import (
