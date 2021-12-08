@@ -11,8 +11,8 @@ if [ -z "$1" ]; then
 fi
 
 
-if [ -z "$2" ]; then
-    echo "Missing test value parameter"
+if [ ! -z "$3" ]; then
+    echo "Too many arguments passed"
     exit 1
 fi
 
@@ -36,6 +36,8 @@ GEN_TEST_FILE="$SCRIPT_DIR/${TYPE_NAME}_test.go"
 sed "s/myType/$TYPE_NAME/g" "$TEMPLATE_PATH" |
 sed "s/MyType/$CAMEL_TYPE/g" > "$GEN_FILE"
 
-sed "s/myType{}/$TEST_VALUE/g" "$TEST_TEMPLATE_PATH" |
-sed "s/myType/$TYPE_NAME/g" |
-sed "s/MyType/$CAMEL_TYPE/g" > "$GEN_TEST_FILE"
+if [ ! -z "$TEST_VALUE" ]; then
+    sed "s/myType{}/$TEST_VALUE/g" "$TEST_TEMPLATE_PATH" |
+    sed "s/myType/$TYPE_NAME/g" |
+    sed "s/MyType/$CAMEL_TYPE/g" > "$GEN_TEST_FILE"
+fi 
