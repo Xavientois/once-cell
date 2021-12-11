@@ -16,15 +16,15 @@ Well, this is the library for you!
 ## Installation
 
 ```bash
-go get github.com/Xavientois/once-cell/primitives
+go get github.com/Xavientois/once-cell
 ```
 
 ## Usage
 
 ```go
-import oncecell "github.com/Xavientois/once-cell/primitives"
+import oncecell "github.com/Xavientois/once-cell"
 
-var myString primitives.OnceString
+var myString oncecell.OnceString
 
 // Setters
 myString.SetValue("hello") // Set the value once
@@ -40,10 +40,10 @@ s := myString.MustValue() // Panics if the value has not been set
 ## Custom Types
 
 The library is currently only implemented for primitive types, at least until generics are introduced into the language.
-If you wish to use custom types in the meantime, you can use the `primitives/once-cell-gen.sh` script to generate an implementation for your custom type.
+If you wish to use custom types in the meantime, you can use the `once-cell-gen.sh` script to generate an implementation for your custom type.
 
 ```bash
-./primitives/once-cell-gen.sh YourTypeName
+./once-cell-gen.sh YourTypeName
 ```
 
 The second command-line argument is the value to be used in the generated tests
