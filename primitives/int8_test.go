@@ -28,7 +28,7 @@ func TestGetInt8Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceInt8
 
-	err := o.SetValue(testInt8Value)
+	o.SetValue(testInt8Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

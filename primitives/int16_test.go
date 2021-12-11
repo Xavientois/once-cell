@@ -28,7 +28,7 @@ func TestGetInt16Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceInt16
 
-	err := o.SetValue(testInt16Value)
+	o.SetValue(testInt16Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

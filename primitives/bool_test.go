@@ -28,7 +28,7 @@ func TestGetBoolValue(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceBool
 
-	err := o.SetValue(testBoolValue)
+	o.SetValue(testBoolValue)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

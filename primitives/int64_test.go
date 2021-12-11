@@ -28,7 +28,7 @@ func TestGetInt64Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceInt64
 
-	err := o.SetValue(testInt64Value)
+	o.SetValue(testInt64Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

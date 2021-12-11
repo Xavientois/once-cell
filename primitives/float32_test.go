@@ -28,7 +28,7 @@ func TestGetFloat32Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceFloat32
 
-	err := o.SetValue(testFloat32Value)
+	o.SetValue(testFloat32Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

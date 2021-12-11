@@ -28,7 +28,7 @@ func TestGetMyTypeValue(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceMyType
 
-	err := o.SetValue(testMyTypeValue)
+	o.SetValue(testMyTypeValue)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

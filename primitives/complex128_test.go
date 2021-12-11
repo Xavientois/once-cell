@@ -28,7 +28,7 @@ func TestGetComplex128Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceComplex128
 
-	err := o.SetValue(testComplex128Value)
+	o.SetValue(testComplex128Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

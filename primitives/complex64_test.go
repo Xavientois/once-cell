@@ -28,7 +28,7 @@ func TestGetComplex64Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceComplex64
 
-	err := o.SetValue(testComplex64Value)
+	o.SetValue(testComplex64Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

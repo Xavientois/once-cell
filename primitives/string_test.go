@@ -28,7 +28,7 @@ func TestGetStringValue(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceString
 
-	err := o.SetValue(testStringValue)
+	o.SetValue(testStringValue)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())

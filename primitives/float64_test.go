@@ -28,7 +28,7 @@ func TestGetFloat64Value(t *testing.T) {
 	Default = NewGomegaWithT(t)
 	var o OnceFloat64
 
-	err := o.SetValue(testFloat64Value)
+	o.SetValue(testFloat64Value)
 
 	v, err := o.Value()
 	Ω(err).ShouldNot(HaveOccurred())
