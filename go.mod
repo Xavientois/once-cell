@@ -1,4 +1,4 @@
-module github.com/Xavientois/once-cell/primitives
+module github.com/Xavientois/once-cell
 
 go 1.17
 
