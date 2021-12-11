@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 TEMPLATE_PATH="$SCRIPT_DIR/once-cell.template.go"
-TEST_TEMPLATE_PATH="$SCRIPT_DIR/once-cell-test.template.go"
+TEST_TEMPLATE_PATH="$SCRIPT_DIR/once-cell-test.template_test.go"
 
 
 if [ -z "$1" ]; then
